@@ -1,241 +1,212 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="A-One Clothing — Kingston’s great outdoor store since 1938. Currently closed until further notice. Follow our socials for updates."
-    />
-    <title>A-One Clothing | Kingston’s Great Outdoor Store</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A One Clothing | Kingston Outdoor Apparel</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Optional: swap to system fonts if you want zero external deps -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- CSS is in /css -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
+<body id="top">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="A One Clothing home">
+        <span class="brand-mark">A</span>
+        <span class="brand-name">A One Clothing</span>
+      </a>
 
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#brands">Brands</a>
+        <a href="#updates">Updates</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <header class="header">
-      <div class="container header__inner">
-        <a class="brand" href="#" aria-label="A-One Clothing home">
-          <span class="brand__mark" aria-hidden="true">A1</span>
-          <span class="brand__text">
-            <span class="brand__name">A-One Clothing</span>
-            <span class="brand__tag">Kingston’s Great Outdoor Store</span>
-          </span>
-        </a>
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-label="Store status">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
 
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
-          <span class="nav-toggle__bars" aria-hidden="true"></span>
-          <span class="sr-only">Menu</span>
-        </button>
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <p class="status-pill">
+            <span class="dot" aria-hidden="true"></span>
+            Temporarily Closed
+          </p>
 
-        <nav class="nav" id="siteNav">
-          <a href="#update">Update</a>
-          <a href="#about">About</a>
-          <a href="#brands">Brands</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
+          <h1>Store Updates Coming Soon</h1>
 
-    <main id="main">
-      <!-- HERO -->
-      <section class="hero">
-        <div class="container hero__grid">
-          <div class="hero__content">
-            <p class="pill">
-              <span class="dot" aria-hidden="true"></span>
-              Store update
-            </p>
+          <p class="hero-text">
+            We’re currently closed until further notice. Please check back here
+            for updates or contact us directly if you need assistance.
+          </p>
 
-            <h1>Your great outdoor store — we’ll be back.</h1>
-
-            <p class="lead">
-              A-One Clothing is currently <strong>closed until further notice</strong>. Please check our social
-              channels for the latest reopening updates.
-            </p>
-
-            <div class="hero__cta">
-              <a class="btn btn--primary" href="#update">Read the latest update</a>
-              <a class="btn btn--ghost" href="#contact">Get in touch</a>
-            </div>
-
-            <div class="hero__quick">
-              <div class="quick-card">
-                <p class="quick-title">Call</p>
-                <a class="quick-link" href="tel:16135488732">613-548-8732</a>
-              </div>
-              <div class="quick-card">
-                <p class="quick-title">Email</p>
-                <a class="quick-link" href="mailto:info@aoneclothing.com">info@aoneclothing.com</a>
-              </div>
-              <div class="quick-card">
-                <p class="quick-title">Location</p>
-                <p class="quick-text">Downtown Kingston, Ontario</p>
-              </div>
-            </div>
+          <div class="hero-actions">
+            <a class="btn" href="#updates">How to get updates</a>
+            <a class="btn btn-ghost" href="#contact">Contact us</a>
           </div>
 
-          <div class="hero__panel" role="region" aria-label="Reopening notice">
-            <div class="notice" id="update">
-              <h2>Closure notice</h2>
-              <p>
-                We are closed until further notice due to a <strong>fire on December 21</strong>.
-                We appreciate our customers and hope to welcome you back as soon as we reopen.
-              </p>
-
-              <div class="notice__actions">
-                <!-- Replace these URLs if your instructor wants real links preserved -->
-                <a class="btn btn--secondary" href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-                  Follow on Facebook
-                </a>
-                <a class="btn btn--secondary" href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-                  Follow on Instagram
-                </a>
-              </div>
-
-              <p class="small muted">
-                Tip: pin a post on socials with “Reopening updates” so customers always see the latest.
-              </p>
-            </div>
-
-            <form class="signup" id="signupForm" novalidate>
-              <h3>Get an email when we reopen</h3>
-              <p class="small muted">Optional email signup (static demo — no database in Phase 1).</p>
-
-              <label class="sr-only" for="email">Email address</label>
-              <div class="signup__row">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  placeholder="you@example.com"
-                  required
-                />
-                <button class="btn btn--primary" type="submit">Notify me</button>
-              </div>
-              <p class="small" id="formMessage" role="status" aria-live="polite"></p>
-            </form>
-          </div>
+          <p class="hero-note">
+            Kingston outdoor apparel & footwear — built for comfort, weather, and everyday wear.
+          </p>
         </div>
-      </section>
 
-      <!-- ABOUT -->
-      <section class="section" id="about">
-        <div class="container">
-          <div class="section__header">
-            <h2>Kingston’s great outdoor store</h2>
-            <p class="muted">
-              A landmark in downtown Kingston since <strong>1938</strong>, with clothing, footwear, gear, and accessories
-              for every season and everyone in the family.
-            </p>
-          </div>
-
-          <div class="cards">
-            <article class="card">
-              <h3>Locally owned</h3>
-              <p>We live and play where you do — expect friendly advice and real product knowledge.</p>
-            </article>
-
-            <article class="card">
-              <h3>Outdoor essentials</h3>
-              <p>From boots to base layers, we carry dependable gear for everyday life and backcountry trips.</p>
-            </article>
-
-            <article class="card">
-              <h3>For the whole family</h3>
-              <p>A-One Clothing, A-One Kids, and Big Men’s selection — built around fit, comfort, and durability.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- BRANDS -->
-      <section class="section section--alt" id="brands">
-        <div class="container">
-          <div class="section__header">
-            <h2>A1 Brands. A1 Price. A1 Service.</h2>
-            <p class="muted">A few customer favourites (sample list — add more later).</p>
-          </div>
-
-          <ul class="brand-grid" aria-label="Featured brands">
-            <li class="brand-chip">Blundstone</li>
-            <li class="brand-chip">Canada Goose</li>
-            <li class="brand-chip">Darn Tough</li>
-            <li class="brand-chip">Merrell</li>
-            <li class="brand-chip">Sorel</li>
-            <li class="brand-chip">Gordini</li>
-            <li class="brand-chip">Trepass</li>
-            <li class="brand-chip">More in-store</li>
+        <aside class="hero-card" aria-label="Quick info">
+          <h2>Quick Info</h2>
+          <ul class="quick-info">
+            <li><strong>Status:</strong> Closed until further notice</li>
+            <li><strong>Updates:</strong> Website + contact</li>
+            <li><strong>Brands:</strong> Barbour, Blundstone, Canada Goose</li>
           </ul>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section class="section" id="contact">
-        <div class="container contact">
-          <div class="contact__left">
-            <h2>Contact</h2>
-            <p class="muted">
-              For urgent questions, reach out by phone or email. For reopening news, socials will update fastest.
-            </p>
-
-            <div class="contact__items">
-              <div class="contact__item">
-                <p class="contact__label">Phone</p>
-                <a class="contact__value" href="tel:16135488732">613-548-8732</a>
-              </div>
-              <div class="contact__item">
-                <p class="contact__label">Email</p>
-                <a class="contact__value" href="mailto:info@aoneclothing.com">info@aoneclothing.com</a>
-              </div>
-              <div class="contact__item">
-                <p class="contact__label">Social</p>
-                <div class="contact__links">
-                  <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a>
-                  <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact__right" aria-label="Map placeholder">
-            <div class="map">
-              <p class="map__title">Downtown Kingston</p>
-              <p class="map__text">
-                Replace this with an embedded map in Phase 1 (still static) or a richer locator in Phase 2.
-              </p>
-              <a
-                class="btn btn--ghost"
-                href="https://www.google.com/maps/search/?api=1&query=A-One+Clothing+Kingston"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open in Google Maps
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer__inner">
-        <p class="muted">© <span id="year"></span> A-One Clothing • Kingston, Ontario</p>
-        <p class="muted">Built for Project A (Static HTML/CSS/JS)</p>
+        </aside>
       </div>
-    </footer>
+    </section>
 
-    <script src="js/main.js"></script>
-  </body>
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>About A One Clothing</h2>
+          <p>
+            This redesign is a clean, mobile-friendly prototype for a Kingston retailer.
+            The focus is clarity, trust, and easy navigation.
+          </p>
+        </div>
+
+        <div class="two-col">
+          <article class="card">
+            <h3>Simple and modern</h3>
+            <p>
+              A clean layout with strong typography and spacing, designed to feel current and professional.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Customer-first</h3>
+            <p>
+              Important info is easy to find: store status, featured brands, and contact details.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands -->
+    <section id="brands" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Brands</h2>
+          <p>Using only the four images provided for this project.</p>
+        </div>
+
+        <div class="brand-grid">
+          <article class="brand-card">
+            <img src="assets/barbour.jpg" alt="Barbour brand image" loading="lazy" />
+            <div class="brand-body">
+              <h3>Barbour</h3>
+              <p>Classic outerwear with timeless style.</p>
+            </div>
+          </article>
+
+          <article class="brand-card">
+            <img src="assets/blundstone.jpg" alt="Blundstone brand image" loading="lazy" />
+            <div class="brand-body">
+              <h3>Blundstone</h3>
+              <p>Comfortable boots for daily wear.</p>
+            </div>
+          </article>
+
+          <article class="brand-card">
+            <img src="assets/goose.jpg" alt="Canada Goose brand image" loading="lazy" />
+            <div class="brand-body">
+              <h3>Canada Goose</h3>
+              <p>Warm outerwear built for cold weather.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Updates -->
+    <section id="updates" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>How to Get Updates</h2>
+          <p>
+            For Phase 1 (static site), the email signup is a demo form (no backend yet).
+          </p>
+        </div>
+
+        <div class="two-col">
+          <article class="card card-warm">
+            <h3>Check back here</h3>
+            <p>
+              This page is designed to make updates easy to find and readable on mobile.
+            </p>
+            <p class="small-muted">
+              Tip: When you reopen the store, update this section first.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Email updates (demo)</h3>
+            <p class="small-muted">This is a Phase 1 prototype form.</p>
+
+            <form id="signupForm" class="form">
+              <label class="sr-only" for="email">Email address</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              <button class="btn" type="submit">Notify me</button>
+            </form>
+
+            <p id="formMessage" class="form-message" aria-live="polite"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>Reach us directly using the information below.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <h3>Email</h3>
+            <a href="mailto:aoneclothing@cogeco.net">aoneclothing@cogeco.net</a>
+          </div>
+
+          <div class="contact-item">
+            <h3>Phone</h3>
+            <a href="tel:+16135463641">613-546-3641</a>
+          </div>
+
+          <div class="contact-item">
+            <h3>Status</h3>
+            <p>Closed until further notice</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 A One Clothing — Static redesign prototype (Phase 1).</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- JS is in /js -->
+  <script src="js/main.js"></script>
+</body>
 </html>

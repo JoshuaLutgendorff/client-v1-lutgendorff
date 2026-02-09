@@ -1,42 +1,20 @@
-(function () {
-  const navToggle = document.getElementById("navToggle");
-  const nav = document.getElementById("siteNav");
-  const year = document.getElementById("year");
-
-  if (year) year.textContent = new Date().getFullYear();
-
-  if (navToggle && nav) {
-    navToggle.addEventListener("click", () => {
-      const isOpen = nav.classList.toggle("is-open");
-      navToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    // close menu after clicking a link (mobile)
-    nav.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => {
-        nav.classList.remove("is-open");
-        navToggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-
-  // Static demo form (no backend in Phase 1)
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("signupForm");
   const msg = document.getElementById("formMessage");
+  const emailInput = document.getElementById("email");
 
-  if (form && msg) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
+  if (!form || !msg) return;
 
-      const email = form.querySelector('input[type="email"]')?.value?.trim() || "";
-      if (!email || !email.includes("@")) {
-        msg.textContent = "Please enter a valid email address.";
-        return;
-      }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-      // In Phase 1 we just simulate success
-      msg.textContent = "Thanks! You’re on the list (demo).";
-      form.reset();
-    });
-  }
-})();
+    const email = (emailInput?.value || "").trim();
+    if (!email) {
+      msg.textContent = "Please enter an email address.";
+      return;
+    }
+
+    msg.textContent = "Thanks! This is a Phase 1 demo signup (no backend yet).";
+    form.reset();
+  });
+});
